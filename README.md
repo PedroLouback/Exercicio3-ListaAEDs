@@ -48,7 +48,7 @@ Segue a representação gráfica de um exemplo de uma verificação de relação
 <img src="imgs/representacaodiagrama.png" width="800px"/>
 </p>
 
-              A maior cadeia que se relacionou com a nova sequência de nucleotídios foi a do códon 4 ao códon 5!
+   A maior cadeia que se relacionou com a nova sequência de nucleotídios foi a do códon 4 ao códon 5!
 
 
 
