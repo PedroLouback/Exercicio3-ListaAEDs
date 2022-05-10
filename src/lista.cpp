@@ -108,7 +108,7 @@ void SepararEmCodon(string cadeia, Lista *l){
 void ProcuraRelacao(Lista *cadeia1, Lista *cadeia2){
 	int i=0, j=0,l=0, count=0;
 	vector <int> pos;
-	bool teste = false;
+	bool verifica = false;
 	for (i=cadeia1->first; i<cadeia1->last; i++){
 		for(j=cadeia2->first; j<cadeia2->last; j++){
 			if(cadeia1->vet[i].codons == cadeia2->vet[j].codons ){
@@ -117,18 +117,18 @@ void ProcuraRelacao(Lista *cadeia1, Lista *cadeia2){
 				if (count>1){
 					if(cadeia1->vet[i-1].codons == cadeia2->vet[j-1].codons){
 						pos.push_back(i);
-					}else if (teste == false){
+					}else if (verifica == false){
 						 cout << "A maior cadeia que se relacionou com a nova sequência de nucleotídios foi apenas a do códon " << pos.size()-1 << "!\n" << endl;
-						 teste=true;
+						 verifica=true;
 					}
 				}
-			}else if(teste == false && pos.size()>1){
+			}else if(verifica == false && pos.size()>1){
 				cout << "A maior cadeia que se relacionou com a nova sequência de nucleotídios foi a do códon " << pos[l] << " ao códon " << pos.back() << "!\n" << endl;
-				teste=true;
+				verifica=true;
 			}
 		}
 	}
-	if(teste == false){
+	if(verifica == false){
 		if(pos.size()>1){
 			cout << "A maior cadeia que se relacionou com a nova sequência de nucleotídios foi a do códon " << pos[l] << " ao códon " << pos.back() << "!\n" << endl;
 		}else{
